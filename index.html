@@ -31,12 +31,13 @@
 
       $("#donut-form").on("submit", function (event) {
         event.preventDefault();
-
-        
-        
-        
-        
-        
+        var $donutType = $(this).find("[name=type]"); 
+        var donutType = $donutType.val();
+        var $img = $("<img>");
+        $img.width(100);
+        $img.attr("src", donutImages[donutType]);
+        $img.appendTo("body");
+ 
       });
     </script>
   </body>
